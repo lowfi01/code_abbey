@@ -1,9 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
-pathing = path.join(__dirname, "..", "MinOfThree.txt");
-
-fs.readFile(pathing, "utf8", function(err, data) {
+fs.readFile(path.join(__dirname, "/inputs", "MinOfThree.txt"), "utf8", function(
+  err,
+  data
+) {
   if (err) {
     console.log(err);
   }
