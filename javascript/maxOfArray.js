@@ -18,15 +18,20 @@ function algorithm(inputs) {
   if (!inputs) {
     console.log("Houston we have a problem!");
   }
-  let highest = 0;
-  let lowest = 0;
+  let highest = 0,
+    lowest = 0;
   for (var i = 0; i < inputs.length; i++) {
-    if (highest < parseInt(inputs[i])) {
-      highest = parseInt(inputs[i]);
-    }
-    if (lowest > parseInt(inputs[i])) {
-      lowest = parseInt(inputs[i]);
-    }
+    // Optional use start if conditions
+    // if (highest < parseInt(inputs[i])) {
+    //   highest = parseInt(inputs[i]);
+    // }
+    // if (lowest > parseInt(inputs[i])) {
+    //   lowest = parseInt(inputs[i]);
+    // }
+
+    // Optional use ternary to solve this problem
+    highest = parseInt(inputs[i]) > highest ? parseInt(inputs[i]) : highest;
+    lowest = parseInt(inputs[i]) < lowest ? parseInt(inputs[i]) : lowest;
   }
   console.log(highest + " " + lowest);
 }
