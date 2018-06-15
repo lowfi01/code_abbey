@@ -12,4 +12,4 @@ for (var i = 0; i < inputs.length; i++) {
 
 console.log(sum);
 
-// Hello World
+// Hello Github..
